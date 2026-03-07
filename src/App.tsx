@@ -1,12 +1,15 @@
 // importar librerias
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+
+// importar componentes
+
+// importar paginas
+import { Introduccion } from "./pages/Introduccion.tsx";
 
 function App() {
   return (
     <HashRouter>
-      <Routes>
-        <Route path="/" element={<div>Home</div>} />
-      </Routes>
+      <Introduccion />
     </HashRouter>
   );
 }
