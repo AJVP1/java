@@ -5,13 +5,13 @@ import modulosData from "../data/modulos.json";
 import Note from "../components/Notes.tsx";
 import Codeblock from "../components/Codeblock.tsx";
 
-const holaMundoCode = `public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hola Mundo");
+const holaMundoCode = `<span class="keyword">public</span> <span class="keyword">class</span> Main {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+        System.<span class="function">println</span>(<span class="string">"Hola Mundo"</span>);
     }
 }`;
 
-const compilarEjecutarCode = `javac Main.java java Main`;
+const compilarEjecutarCode = `javac Main.java\njava Main`;
 
 export const Introduccion = () => {
   return (
@@ -164,7 +164,7 @@ export const Introduccion = () => {
         <span className="font-semibold">Hola Mundo</span>:
       </p>
 
-      <Codeblock code={holaMundoCode} />
+      <Codeblock code={holaMundoCode} title="Java" />
 
       <p className="text-base leading-7 text-[#141414] my-6">
         En este ejemplo, la clase{" "}
@@ -186,7 +186,7 @@ export const Introduccion = () => {
         los siguientes comandos:
       </p>
 
-      <Codeblock code={compilarEjecutarCode} />
+      <Codeblock code={compilarEjecutarCode} title="Terminal" />
 
       <Note title="Resumen" icon="terminal">
         <span className="font-semibold">javac</span> compila el archivo fuente y
