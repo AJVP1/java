@@ -6,6 +6,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 // importar paginas
 import { Introduccion } from "./pages/Introduccion.tsx";
 import { Instalacion } from "./pages/Instalacion.tsx";
+import { Sintaxis } from "./pages/Sintaxis.tsx";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Introduccion />} />
         <Route path="/instalacion" element={<Instalacion />} />
+        <Route path="/sintaxis" element={<Sintaxis />} />
+
         <Route path="*" element={<p>Página no encontrada</p>} />
       </Routes>
     </HashRouter>
