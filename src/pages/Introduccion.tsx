@@ -7,7 +7,7 @@ import Codeblock from "../components/Codeblock.tsx";
 
 const holaMundoCode = `<span class="keyword">public</span> <span class="keyword">class</span> Main {
     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
-        System.<span class="function">println</span>(<span class="string">"Hola Mundo"</span>);
+        System.out.<span class="function">println</span>(<span class="string">"Hola Mundo"</span>);
     }
 }`;
 
