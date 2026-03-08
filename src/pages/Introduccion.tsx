@@ -2,6 +2,8 @@ import { DocsLayout } from "../layout/Docs.tsx";
 import { Sidebar } from "../components/Sidebar.tsx";
 import { TableOfContents } from "../components/TableOfContents.tsx";
 import modulosData from "../data/modulos.json";
+import Note from "../components/Notes.tsx";
+import Codeblock from "../components/Codeblock.tsx";
 
 const holaMundoCode = `public class Main {
     public static void main(String[] args) {
@@ -9,15 +11,13 @@ const holaMundoCode = `public class Main {
     }
 }`;
 
+const compilarEjecutarCode = `javac Main.java java Main`;
+
 export const Introduccion = () => {
   return (
     <DocsLayout
       sidebar={<Sidebar />}
-      toc={
-        <TableOfContents
-          items={modulosData.sidebar[0].items[0].toc}
-        />
-      }
+      toc={<TableOfContents items={modulosData.sidebar[0].items[0].toc} />}
     >
       <h1 className="text-4xl font-extrabold tracking-tight text-[#141414] mb-4">
         Introducción a Java
@@ -50,22 +50,12 @@ export const Introduccion = () => {
         <span className="font-semibold">Java Virtual Machine (JVM)</span>.
       </p>
 
-      <div className="bg-[#f7f7f7] border-l-4 border-[#141414] p-5 my-8 rounded-r-lg">
-        <div className="flex gap-3">
-          <span className="material-symbols-outlined text-[#141414]">info</span>
-          <div>
-            <p className="font-bold text-sm mb-1 text-[#141414]">
-              Principio fundamental
-            </p>
-            <p className="text-sm text-[#757575]">
-              Java sigue la idea de{" "}
-              <span className="font-semibold">Write Once, Run Anywhere</span>,
-              es decir, escribir el programa una vez y ejecutarlo en cualquier
-              plataforma que tenga una JVM instalada.
-            </p>
-          </div>
-        </div>
-      </div>
+      <Note title="Principio fundamental">
+        Java sigue la idea de{" "}
+        <span className="font-semibold">Write Once, Run Anywhere</span>, es
+        decir, escribir el programa una vez y ejecutarlo en cualquier plataforma
+        que tenga una JVM instalada.
+      </Note>
 
       <h2
         className="text-2xl font-bold mt-12 mb-4 text-[#141414] scroll-mt-20"
@@ -174,9 +164,7 @@ export const Introduccion = () => {
         <span className="font-semibold">Hola Mundo</span>:
       </p>
 
-      <pre className="bg-[#f7f7f7] border border-[#f2f2f2] rounded-xl p-5 overflow-x-auto my-8">
-        <code className="text-sm text-[#141414]">{holaMundoCode}</code>
-      </pre>
+      <Codeblock code={holaMundoCode} />
 
       <p className="text-base leading-7 text-[#141414] my-6">
         En este ejemplo, la clase{" "}
@@ -198,28 +186,14 @@ export const Introduccion = () => {
         los siguientes comandos:
       </p>
 
-      <pre className="bg-[#f7f7f7] border border-[#f2f2f2] rounded-xl p-5 overflow-x-auto my-8">
-        <code className="text-sm text-[#141414]">
-          javac Main.java java Main
-        </code>
-      </pre>
+      <Codeblock code={compilarEjecutarCode} />
 
-      <div className="bg-[#f7f7f7] border-l-4 border-[#141414] p-5 my-8 rounded-r-lg">
-        <div className="flex gap-3">
-          <span className="material-symbols-outlined text-[#141414]">
-            terminal
-          </span>
-          <div>
-            <p className="font-bold text-sm mb-1 text-[#141414]">Resumen</p>
-            <p className="text-sm text-[#757575]">
-              <span className="font-semibold">javac</span> compila el archivo
-              fuente y genera el bytecode, mientras que{" "}
-              <span className="font-semibold">java</span> ejecuta la clase
-              usando la JVM.
-            </p>
-          </div>
-        </div>
-      </div>
+      <Note title="Resumen" icon="terminal">
+        <span className="font-semibold">javac</span> compila el archivo fuente y
+        genera el bytecode, mientras que{" "}
+        <span className="font-semibold">java</span> ejecuta la clase usando la
+        JVM.
+      </Note>
     </DocsLayout>
   );
 };
