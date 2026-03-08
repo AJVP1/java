@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Header } from "../components/Header";
+import Footer from "../components/Footer";
 
 type DocsLayoutProps = {
   sidebar?: ReactNode;
@@ -18,7 +19,10 @@ export const DocsLayout = ({ sidebar, toc, children }: DocsLayoutProps) => {
 
         {/* Contenido principal */}
         <main className="flex-1 min-w-0">
-          <div className="mx-auto max-w-3xl px-6 py-10">{children}</div>
+          <div className="mx-auto max-w-3xl px-6 py-10">
+            {children}
+            <Footer />
+          </div>
         </main>
 
         {/* Sidebar derecho */}
