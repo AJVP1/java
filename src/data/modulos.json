@@ -18,21 +18,131 @@
             { "id": "compilar-ejecutar", "title": "Compilar y ejecutar" }
           ]
         },
-        { "to": "/install", "label": "Instalación", "icon": "download" }
+        {
+          "to": "/install",
+          "label": "Instalación",
+          "icon": "download",
+          "toc": [
+            { "id": "requisitos-previos", "title": "Requisitos previos" },
+            { "id": "descargar-jdk", "title": "Descargar el JDK" },
+            { "id": "configurar-java-home", "title": "Configurar JAVA_HOME" },
+            { "id": "verificar-instalacion", "title": "Verificar instalación" },
+            { "id": "ides-recomendados", "title": "IDEs recomendados" }
+          ]
+        }
       ]
     },
     {
       "title": "Conceptos Básicos",
       "items": [
-        { "to": "/components", "label": "Componentes", "icon": "widgets" },
-        { "to": "/hooks", "label": "Hooks", "icon": "data_object" }
+        {
+          "to": "/syntax",
+          "label": "Sintaxis básica",
+          "icon": "code",
+          "toc": [
+            {
+              "id": "estructura-programa",
+              "title": "Estructura de un programa"
+            },
+            { "id": "variables-tipos", "title": "Variables y tipos de datos" },
+            { "id": "operadores", "title": "Operadores" },
+            { "id": "condicionales", "title": "Condicionales" },
+            { "id": "bucles", "title": "Bucles" }
+          ]
+        },
+        {
+          "to": "/poo",
+          "label": "Programación orientada a objetos",
+          "icon": "account_tree",
+          "toc": [
+            { "id": "clases-objetos", "title": "Clases y objetos" },
+            { "id": "constructores", "title": "Constructores" },
+            { "id": "encapsulamiento", "title": "Encapsulamiento" },
+            { "id": "herencia", "title": "Herencia" },
+            { "id": "polimorfismo", "title": "Polimorfismo" }
+          ]
+        },
+        {
+          "to": "/collections",
+          "label": "Colecciones",
+          "icon": "inventory_2",
+          "toc": [
+            { "id": "listas", "title": "List" },
+            { "id": "sets", "title": "Set" },
+            { "id": "maps", "title": "Map" },
+            { "id": "arraylist", "title": "ArrayList" },
+            { "id": "hashmap", "title": "HashMap" }
+          ]
+        },
+        {
+          "to": "/exceptions",
+          "label": "Excepciones",
+          "icon": "warning",
+          "toc": [
+            {
+              "id": "que-son-excepciones",
+              "title": "¿Qué son las excepciones?"
+            },
+            { "id": "try-catch", "title": "try / catch" },
+            { "id": "finally", "title": "finally" },
+            { "id": "throw-throws", "title": "throw y throws" },
+            {
+              "id": "excepciones-personalizadas",
+              "title": "Excepciones personalizadas"
+            }
+          ]
+        }
       ]
     },
     {
       "title": "Avanzado",
       "items": [
-        { "to": "/performance", "label": "Performance", "icon": "speed" },
-        { "to": "/testing", "label": "Testing", "icon": "science" }
+        {
+          "to": "/streams",
+          "label": "Streams y Lambdas",
+          "icon": "alt_route",
+          "toc": [
+            { "id": "expresiones-lambda", "title": "Expresiones lambda" },
+            { "id": "stream-api", "title": "Stream API" },
+            { "id": "filter-map", "title": "filter y map" },
+            { "id": "reduce", "title": "reduce" },
+            { "id": "optional", "title": "Optional" }
+          ]
+        },
+        {
+          "to": "/testing",
+          "label": "Testing",
+          "icon": "science",
+          "toc": [
+            { "id": "junit", "title": "JUnit" },
+            { "id": "mockito", "title": "Mockito" },
+            { "id": "pruebas-unitarias", "title": "Pruebas unitarias" },
+            { "id": "buenas-practicas", "title": "Buenas prácticas" }
+          ]
+        },
+        {
+          "to": "/build-tools",
+          "label": "Maven y Gradle",
+          "icon": "build",
+          "toc": [
+            { "id": "que-es-maven", "title": "¿Qué es Maven?" },
+            { "id": "que-es-gradle", "title": "¿Qué es Gradle?" },
+            { "id": "dependencias", "title": "Gestión de dependencias" },
+            { "id": "estructura-proyecto", "title": "Estructura del proyecto" }
+          ]
+        },
+        {
+          "to": "/spring",
+          "label": "Spring Boot",
+          "icon": "rocket_launch",
+          "toc": [
+            { "id": "que-es-spring", "title": "¿Qué es Spring Boot?" },
+            { "id": "crear-proyecto", "title": "Crear proyecto" },
+            { "id": "controladores", "title": "Controladores" },
+            { "id": "servicios", "title": "Servicios" },
+            { "id": "apis-rest", "title": "APIs REST" }
+          ]
+        }
       ]
     }
   ]
