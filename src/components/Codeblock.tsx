@@ -1,11 +1,13 @@
 interface CodeblockProps {
   code: string;
+  title?: string;
 }
 
-export default function Codeblock({ code }: CodeblockProps) {
+export default function Codeblock({ code, title }: CodeblockProps) {
   return (
-    <pre className="bg-[#f7f7f7] border border-[#f2f2f2] rounded-xl p-5 overflow-x-auto my-8">
-      <code className="text-sm text-[#141414]">{code}</code>
-    </pre>
+    <div className="code-box my-8 -mx-6">
+      {title && <div className="code-header">{title}</div>}
+      <pre dangerouslySetInnerHTML={{ __html: code }} />
+    </div>
   );
 }
