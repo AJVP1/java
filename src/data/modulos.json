@@ -19,7 +19,7 @@
           ]
         },
         {
-          "to": "/install",
+          "to": "/instalacion",
           "label": "Instalación",
           "icon": "download",
           "toc": [
@@ -36,7 +36,7 @@
       "title": "Conceptos Básicos",
       "items": [
         {
-          "to": "/syntax",
+          "to": "/sintaxis",
           "label": "Sintaxis básica",
           "icon": "code",
           "toc": [
@@ -63,7 +63,7 @@
           ]
         },
         {
-          "to": "/collections",
+          "to": "/colecciones",
           "label": "Colecciones",
           "icon": "inventory_2",
           "toc": [
@@ -75,7 +75,7 @@
           ]
         },
         {
-          "to": "/exceptions",
+          "to": "/excepciones",
           "label": "Excepciones",
           "icon": "warning",
           "toc": [
@@ -98,7 +98,7 @@
       "title": "Avanzado",
       "items": [
         {
-          "to": "/streams",
+          "to": "/flujos",
           "label": "Streams y Lambdas",
           "icon": "alt_route",
           "toc": [
@@ -110,7 +110,7 @@
           ]
         },
         {
-          "to": "/testing",
+          "to": "/pruebas",
           "label": "Testing",
           "icon": "science",
           "toc": [
@@ -121,7 +121,7 @@
           ]
         },
         {
-          "to": "/build-tools",
+          "to": "/herramientas",
           "label": "Maven y Gradle",
           "icon": "build",
           "toc": [
