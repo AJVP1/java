@@ -1,80 +1,57 @@
+// importaciones
 import { useEffect, useState } from "react";
 
-type TableOfContentsItem = {
-  id: string;
-  title: string;
-};
+// typos
+type Item = { id: string; title: string };
+type Props = { items?: Item[] };
 
-type TableOfContentsProps = {
-  title?: string;
-  items?: TableOfContentsItem[];
-};
-
-export const TableOfContents = ({
-  title = "En esta página",
-  items = [],
-}: TableOfContentsProps) => {
-  const [activeId, setActiveId] = useState<string>("");
+export const TableOfContents = ({ items = [] }: Props) => {
+  const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
     if (!items.length) return;
 
-    const sections = items
-      .map((item) => document.getElementById(item.id))
-      .filter((section): section is HTMLElement => section !== null);
-
-    if (!sections.length) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleSections = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (visibleSections.length > 0) {
-          setActiveId(visibleSections[0].target.id);
-        }
+        const visible = entries.find((e) => e.isIntersecting);
+        if (visible) setActiveId(visible.target.id);
       },
-      {
-        rootMargin: "0px 0px -65% 0px",
-        threshold: [0.1, 0.3, 0.5, 0.8],
-      },
+      { rootMargin: "0px 0px -65% 0px", threshold: 0.1 },
     );
 
-    sections.forEach((section) => observer.observe(section));
+    items.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, [items]);
 
   return (
     <aside className="hidden h-[calc(100vh-64px)] w-64 shrink-0 overflow-y-auto p-8 xl:sticky xl:top-16 xl:block">
       <h5 className="mb-4 text-xs font-bold uppercase tracking-wider text-[#757575]">
-        {title}
+        En esta página
       </h5>
-
-      <nav aria-label={title}>
+      <nav aria-label="En esta página">
         <ul className="space-y-3 text-sm">
-          {items.map((item) => {
-            const isActive = activeId === item.id;
-
-            return (
-              <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  className={`block transition-colors ${
-                    isActive
-                      ? "font-medium text-[#141414]"
-                      : "text-[#757575] hover:text-[#141414]"
-                  }`}
-                >
-                  {item.title}
-                </a>
-              </li>
-            );
-          })}
+          {items.map(({ id, title: label }) => (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className={`block transition-colors ${
+                  activeId === id
+                    ? "font-medium text-[#141414]"
+                    : "text-[#757575] hover:text-[#141414]"
+                }`}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </aside>

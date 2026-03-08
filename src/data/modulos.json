@@ -1,0 +1,39 @@
+{
+  "sidebar": [
+    {
+      "title": "Primeros Pasos",
+      "items": [
+        {
+          "to": "/",
+          "label": "Introducción",
+          "icon": "home",
+          "toc": [
+            { "id": "que-es-java", "title": "¿Qué es Java?" },
+            {
+              "id": "ecosistema-java",
+              "title": "Componentes del ecosistema Java"
+            },
+            { "id": "usos-java", "title": "¿Para qué se usa Java?" },
+            { "id": "primer-programa", "title": "Primer programa en Java" },
+            { "id": "compilar-ejecutar", "title": "Compilar y ejecutar" }
+          ]
+        },
+        { "to": "/install", "label": "Instalación", "icon": "download" }
+      ]
+    },
+    {
+      "title": "Conceptos Básicos",
+      "items": [
+        { "to": "/components", "label": "Componentes", "icon": "widgets" },
+        { "to": "/hooks", "label": "Hooks", "icon": "data_object" }
+      ]
+    },
+    {
+      "title": "Avanzado",
+      "items": [
+        { "to": "/performance", "label": "Performance", "icon": "speed" },
+        { "to": "/testing", "label": "Testing", "icon": "science" }
+      ]
+    }
+  ]
+}

@@ -2,31 +2,31 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#f2f2f2] bg-white/95 backdrop-blur-lg">
-      <div className="mx-auto flex max-w-360 items-center px-6 py-4">
+    <header className="sticky top-0 z-50 w-full border-b border-[#f2f2f2] bg-white/95 backdrop-blur-lg mx-auto flex max-w-360 items-center px-6 py-4">
         <Link to="/" className="flex w-fit items-center gap-3">
-          <div className="size-9 text-[#141414]">
-            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <g clipPath="url(#clip0_header)">
-                <path
-                  clipRule="evenodd"
-                  d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
-                  fill="currentColor"
-                  fillRule="evenodd"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_header">
-                  <rect fill="white" height="48" width="48" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="icon icon-tabler icons-tabler-outline icon-tabler-coffee"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 14c.83 .642 2.077 1.017 3.5 1c1.423 .017 2.67 -.358 3.5 -1c.83 -.642 2.077 -1.017 3.5 -1c1.423 -.017 2.67 .358 3.5 1" />
+            <path d="M8 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />
+            <path d="M12 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />
+            <path d="M3 10h14v5a6 6 0 0 1 -6 6h-2a6 6 0 0 1 -6 -6v-5" />
+            <path d="M16.746 16.726a3 3 0 1 0 .252 -5.555" />
+          </svg>
           <span className="text-xl font-extrabold tracking-tight text-[#141414]">
-            JavaDocs
+            Documentación Java
           </span>
         </Link>
-      </div>
     </header>
   );
 };
