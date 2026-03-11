@@ -12,6 +12,7 @@ import { Colecciones } from "./pages/Colecciones.tsx";
 import { Excepciones } from "./pages/Excepciones.tsx";
 import { Flujos } from "./pages/Flujos.tsx";
 import { Pruebas } from "./pages/Pruebas.tsx";
+import { Herramientas } from "./pages/Herramientas.tsx";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
         <Route path="/colecciones" element={<Colecciones />} />
         <Route path="/excepciones" element={<Excepciones />} />
         <Route path="/flujos" element={<Flujos />} />
-        <Route path="/Pruebas" element={<Pruebas />} />
+        <Route path="/pruebas" element={<Pruebas />} />
+        <Route path="/herramientas" element={<Herramientas />} />
 
         <Route path="*" element={<p>Página no encontrada</p>} />
       </Routes>
