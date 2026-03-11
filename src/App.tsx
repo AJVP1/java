@@ -8,6 +8,7 @@ import { Introduccion } from "./pages/Introduccion.tsx";
 import { Instalacion } from "./pages/Instalacion.tsx";
 import { Sintaxis } from "./pages/Sintaxis.tsx";
 import { POO } from "./pages/Poo.tsx";
+import { Colecciones } from "./pages/Colecciones.tsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/instalacion" element={<Instalacion />} />
         <Route path="/sintaxis" element={<Sintaxis />} />
         <Route path="/poo" element={<POO />} />
+        <Route path="/colecciones" element={<Colecciones />} />
 
         <Route path="*" element={<p>Página no encontrada</p>} />
       </Routes>
