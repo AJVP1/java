@@ -59,7 +59,8 @@
             { "id": "constructores", "title": "Constructores" },
             { "id": "encapsulamiento", "title": "Encapsulamiento" },
             { "id": "herencia", "title": "Herencia" },
-            { "id": "polimorfismo", "title": "Polimorfismo" }
+            { "id": "polimorfismo", "title": "Polimorfismo" },
+            { "id": "abstraccion", "title": "Abstracción" }
           ]
         },
         {
