@@ -10,6 +10,7 @@ import { Sintaxis } from "./pages/Sintaxis.tsx";
 import { POO } from "./pages/Poo.tsx";
 import { Colecciones } from "./pages/Colecciones.tsx";
 import { Excepciones } from "./pages/Excepciones.tsx";
+import { Flujos } from "./pages/Flujos.tsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/poo" element={<POO />} />
         <Route path="/colecciones" element={<Colecciones />} />
         <Route path="/excepciones" element={<Excepciones />} />
+        <Route path="/flujos" element={<Flujos />} />
 
         <Route path="*" element={<p>Página no encontrada</p>} />
       </Routes>
