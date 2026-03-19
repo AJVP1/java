@@ -12,10 +12,12 @@ const estructuraProgramaCode = `<span class="keyword">public</span> <span class=
 }`;
 
 const variablesTiposCode = `<span class="keyword">int</span> edad = <span class="number">25</span>;
+<span class="keyword">long</span> poblacion = <span class="number">8000000000L</span>;
 <span class="keyword">double</span> precio = <span class="number">19.99</span>;
+<span class="keyword">float</span> temperatura = <span class="number">36.6f</span>;
 <span class="keyword">char</span> inicial = <span class="string">'A'</span>;
 <span class="keyword">boolean</span> activo = <span class="keyword">true</span>;
-<span class="keyword">String</span> nombre = <span class="string">"Armando"</span>;`;
+String nombre = <span class="string">"Armando"</span>;`;
 
 const operadoresCode = `<span class="keyword">int</span> a = <span class="number">10</span>;
 <span class="keyword">int</span> b = <span class="number">5</span>;
