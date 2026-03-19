@@ -55,6 +55,7 @@
           "label": "Programación orientada a objetos",
           "icon": "account_tree",
           "toc": [
+            { "id": "estructura-clase", "title": "Estructura de una clase" },
             { "id": "clases-objetos", "title": "Clases y objetos" },
             { "id": "constructores", "title": "Constructores" },
             { "id": "encapsulamiento", "title": "Encapsulamiento" },

@@ -5,6 +5,35 @@ import modulosData from "../data/modulos.json";
 import Note from "../components/Notes.tsx";
 import Codeblock from "../components/Codeblock.tsx";
 
+const estructuraClaseCode = `<span class="keyword">class</span> Persona {
+
+    <span class="comment">// Atributos</span>
+    <span class="keyword">private</span> String nombre;
+    <span class="keyword">private</span> <span class="keyword">int</span> edad;
+
+    <span class="comment">// Constructor</span>
+    <span class="keyword">public</span> Persona(String nombre, <span class="keyword">int</span> edad) {
+        <span class="keyword">this</span>.nombre = nombre;
+        <span class="keyword">this</span>.edad = edad;
+    }
+
+    <span class="comment">// Método</span>
+    <span class="keyword">public</span> <span class="keyword">void</span> saludar() {
+        System.out.<span class="function">println</span>(<span class="string">"Hola, soy "</span> + nombre);
+    }
+
+    <span class="comment">// Getter</span>
+    <span class="keyword">public</span> String getNombre() {
+        <span class="keyword">return</span> nombre;
+    }
+
+    <span class="comment">// Setter</span>
+    <span class="keyword">public</span> <span class="keyword">void</span> setNombre(String nombre) {
+        <span class="keyword">this</span>.nombre = nombre;
+    }
+
+}`;
+
 const clasesObjetosCode = `<span class="keyword">class</span> Persona {
 
     String nombre;
@@ -115,6 +144,56 @@ export const POO = () => {
         Este paradigma organiza el código en clases y objetos para modelar
         entidades del mundo real de forma estructurada y reutilizable.
       </p>
+
+      <h2
+        id="estructura-clase"
+        className="text-2xl font-bold mt-12 mb-4 text-[#141414] scroll-mt-20"
+      >
+        Estructura de una clase
+      </h2>
+
+      <p className="text-base leading-7 text-[#141414] my-6">
+        Una clase en Java está compuesta por cuatro elementos principales:{" "}
+        <span className="font-semibold">atributos</span>,{" "}
+        <span className="font-semibold">constructor</span>,{" "}
+        <span className="font-semibold">métodos</span>, y{" "}
+        <span className="font-semibold">getters y setters</span>.
+      </p>
+
+      <Codeblock code={estructuraClaseCode} title="Java" />
+
+      <div className="grid md:grid-cols-2 gap-6 my-8">
+        <div className="p-6 border border-[#f2f2f2] rounded-xl">
+          <h3 className="font-bold text-lg mb-2 text-[#141414]">Atributos</h3>
+          <p className="text-sm text-[#757575]">
+            Variables que representan el estado del objeto. Se declaran como{" "}
+            <code>private</code> para proteger los datos.
+          </p>
+        </div>
+        <div className="p-6 border border-[#f2f2f2] rounded-xl">
+          <h3 className="font-bold text-lg mb-2 text-[#141414]">Constructor</h3>
+          <p className="text-sm text-[#757575]">
+            Método especial que se ejecuta al crear un objeto e inicializa sus
+            atributos.
+          </p>
+        </div>
+        <div className="p-6 border border-[#f2f2f2] rounded-xl">
+          <h3 className="font-bold text-lg mb-2 text-[#141414]">Métodos</h3>
+          <p className="text-sm text-[#757575]">
+            Definen el comportamiento del objeto. Pueden recibir parámetros y
+            retornar valores.
+          </p>
+        </div>
+        <div className="p-6 border border-[#f2f2f2] rounded-xl">
+          <h3 className="font-bold text-lg mb-2 text-[#141414]">
+            Getters y Setters
+          </h3>
+          <p className="text-sm text-[#757575]">
+            Métodos públicos para leer y modificar los atributos privados de
+            forma controlada.
+          </p>
+        </div>
+      </div>
 
       <h2
         id="clases-objetos"
