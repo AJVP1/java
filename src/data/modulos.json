@@ -93,6 +93,17 @@
               "title": "Excepciones personalizadas"
             }
           ]
+        },
+        {
+          "to": "/tipos-genericos",
+          "label": "Tipos Genéricos",
+          "icon": "code",
+          "toc": [
+            { "id": "class", "title": "Class" },
+            { "id": "interface", "title": "Interface" },
+            { "id": "enum", "title": "Enum" },
+            { "id": "record", "title": "Record" }
+          ]
         }
       ]
     },

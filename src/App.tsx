@@ -14,6 +14,7 @@ import { Flujos } from "./pages/Flujos.tsx";
 import { Pruebas } from "./pages/Pruebas.tsx";
 import { Herramientas } from "./pages/Herramientas.tsx";
 import { Spring } from "./pages/Spring.tsx";
+import { Tipos } from "./pages/Tipos.tsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/pruebas" element={<Pruebas />} />
         <Route path="/herramientas" element={<Herramientas />} />
         <Route path="/spring" element={<Spring />} />
+        <Route path="/tipos-genericos" element={<Tipos />} />
 
         <Route path="*" element={<p>Página no encontrada</p>} />
       </Routes>
